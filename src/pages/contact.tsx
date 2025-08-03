@@ -8,8 +8,8 @@ const ContactPage: NextPage = () => {
   return (
     <div className="page-container">
       <Head>
-        <title>Contact Me - Architect</title>
-        <meta name="description" content="Get in touch with me for inquiries and collaborations." />
+        <title>Contact Me – Architectural Designer</title>
+        <meta name="description" content="Get in touch with me for inquiries and collaborations as an architectural designer." />
       </Head>
 
       <Header />

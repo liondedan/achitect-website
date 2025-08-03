@@ -34,8 +34,8 @@ const PortfolioPage: NextPage = () => {
   return (
     <div className="page-container">
       <Head>
-        <title>Portfolio - Architect</title>
-        <meta name="description" content="A selection of my featured work." />
+        <title>Portfolio – Architectural Design Work</title>
+        <meta name="description" content="A selection of my featured work as an architectural designer." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

@@ -9,7 +9,7 @@ const AboutPage: NextPage = () => {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'The Architect', // Placeholder name
-    jobTitle: 'Architect',
+    jobTitle: 'Architectural Designer',
     image: aboutMeData.imageUrl,
     url: 'https://www.yourwebsite.com/about', // Placeholder URL
   };
@@ -17,12 +17,12 @@ const AboutPage: NextPage = () => {
   return (
     <div className="page-container">
       <Head>
-        <title>About Me - Architect</title>
-        <meta name="description" content="Learn more about my background and design philosophy." />
+        <title>About Me – Architectural Designer</title>
+        <meta name="description" content="Learn more about my background and design philosophy as an architectural designer." />
         
         {/* Open Graph Tags */}
-        <meta property="og:title" content="About Me - Architect" />
-        <meta property="og:description" content="Learn more about my background and design philosophy." />
+        <meta property="og:title" content="About Me – Architectural Designer" />
+        <meta property="og:description" content="Learn more about my background and design philosophy as an architectural designer." />
         <meta property="og:image" content={aboutMeData.imageUrl} />
         <meta property="og:url" content="https://www.yourwebsite.com/about" />
         <meta property="og:type" content="website" />

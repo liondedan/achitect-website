@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.heroContent}>
-        <h1 className={styles.heroTitle}>Architect in Pembrokeshire & West Wales</h1>
+        <h1 className={styles.heroTitle}>Architectural Designer in Pembrokeshire & West Wales</h1>
         <p className={styles.heroSubtitle}>
           I’m a Welsh-speaking architectural designer with over 30 years of experience — the last three decades running my own practice in West Wales.
         </p>
@@ -21,7 +21,7 @@ const Hero = () => {
       <div className={styles.heroImageContainer}>
         <Image
           src={heroImage}
-          alt="Modern home extension by a Pembrokeshire architect"
+          alt="Modern home extension by a Pembrokeshire architectural designer"
           className={styles.heroImage}
           priority
           placeholder="blur"

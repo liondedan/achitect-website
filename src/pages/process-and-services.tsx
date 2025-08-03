@@ -10,8 +10,8 @@ const ProcessPage: NextPage = () => {
   return (
     <div className="page-container">
       <Head>
-        <title>A Practical, Supportive Approach - Architect</title>
-        <meta name="description" content="A Practical, Supportive Approach — From First Ideas to Final Details" />
+        <title>A Practical, Supportive Approach – Architectural Design</title>
+        <meta name="description" content="A Practical, Supportive Approach as an architectural designer — From First Ideas to Final Details" />
       </Head>
 
       <Header />

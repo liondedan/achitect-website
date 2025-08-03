@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Architect Pembrokeshire & Wales | Planning Permission | Wales Design</title>
-        <meta name="description" content="Expert architect in Pembrokeshire and Wales, specializing in extensions, renovations, and planning permission. Contact Wales Design for a consultation." />
+        <title>Architectural Designer in Pembrokeshire & Wales | Planning Permission | Wales Design</title>
+        <meta name="description" content="Expert architectural designer in Pembrokeshire and Wales, specializing in extensions, renovations, and planning permission. Contact Wales Design for a consultation." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <script
