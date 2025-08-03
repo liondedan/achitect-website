@@ -1,24 +1,41 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 4rem 2rem;
-  text-align: center;
+  align-items: flex-start; /* Align to the left */
+  padding: 6rem 4rem; /* More padding */
+  min-height: calc(100vh - 100px); /* Full-height section */
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.heroContent {
+  max-width: 750px; /* Constrain text width */
 }
 
 .main h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .main p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  color: var(--color-grey-dark);
 }
 
-.main img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ctaButton:hover {
+  background-color: #333;
 }

@@ -1,0 +1,6 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two-column grid */
+  gap: 4rem 2rem; /* More space between items */
+  padding: 2rem 0;
+}

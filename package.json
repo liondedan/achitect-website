@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "next": "15.4.5",
+    "nodemailer": "^7.0.5",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.61.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.4",
@@ -20,10 +22,12 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "jest": "^30.0.5",
     "jest-environment-jsdom": "^30.0.5",
+    "node-mocks-http": "^1.17.2",
     "typescript": "^5"
   }
 }

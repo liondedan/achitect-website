@@ -1,0 +1,15 @@
+.card {
+  background-color: var(--color-grey-light);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.card h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: var(--color-grey-dark);
+  font-size: 1.125rem;
+}

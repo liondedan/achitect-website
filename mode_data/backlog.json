@@ -1,0 +1,438 @@
+{
+  "solutionTitle": "Architect's Professional Website",
+  "creationTimestamp": "2025-07-31T12:21:00Z",
+  "lastUpdatedTimestamp": "2025-08-02T13:31:32.069Z",
+  "epics": [
+    {
+      "id": "EPIC-01",
+      "title": "Professional Online Presence",
+      "description": "To establish a professional, approachable online presence to attract prospective clients.",
+      "status": "done",
+      "features": [
+        {
+          "id": "FEAT-01A",
+          "title": "Homepage",
+          "description": "A welcoming landing page that provides a brief, compelling introduction to the architect and their work, encouraging visitors to explore further.",
+          "status": "done",
+          "workItems": [
+            {
+              "id": "SITE-001",
+              "type": "story",
+              "title": "Visitor views the homepage",
+              "description": "As a prospective client, I want to see a visually appealing homepage, so that I can get a quick sense of the architect's style and professionalism.",
+              "acceptanceCriteria": [
+                "Given I am on the homepage,",
+                "When the page loads,",
+                "Then I should see a main headline, a brief introductory text, and a high-quality hero image or project photo.",
+                "And I should see clear navigation links to other sections of the site."
+              ],
+              "status": "done",
+              "engineeringPlan": {
+                "tasks": [
+                  { "id": "TASK-001A", "description": "Initialize Next.js Project", "status": "done" },
+                  { "id": "TASK-001B", "description": "Create the Homepage", "status": "done" },
+                  { "id": "TASK-001C", "description": "Create a Reusable Header Component", "status": "done" },
+                  { "id": "TASK-001D", "description": "Build the Hero Section", "status": "done" },
+                  { "id": "TASK-001E", "description": "Apply Basic Styling", "status": "done" },
+                  { "id": "TASK-001F", "description": "Prepare for Vercel Deployment", "status": "done" }
+                ],
+                "notes": [
+                  "The `next/image` component requires specifying the width and height of images for layout stability and performance.",
+                  "Navigation links will point to their respective routes (e.g., `/portfolio`, `/about`). Next.js will handle the page creation.",
+                  "The initial focus is on structure and core content. Advanced styling and animations are out of scope."
+                ],
+                "changelog": [
+                  {
+                    "timestamp": "2025-07-31T12:32:34Z",
+                    "task": "TASK-001A",
+                    "change": "Initialized a new Next.js project named `achitect-website`.",
+                    "impact": "The foundational project structure, dependencies, and configuration are now in place, enabling further development of the website."
+                  },
+                  {
+                    "timestamp": "2025-07-31T12:37:21Z",
+                    "task": "TASK-001B",
+                    "change": "Created the basic homepage structure in `src/pages/index.tsx` and added a welcoming headline. Implemented a passing test to verify the headline's presence.",
+                    "impact": "The homepage now has its initial content and is covered by a basic test, forming the foundation for further development."
+                  },
+                  {
+                    "timestamp": "2025-07-31T12:44:50Z",
+                    "task": "TASK-001C",
+                    "change": "Created a reusable `Header` component with navigation links and integrated it into the homepage.",
+                    "impact": "The site now has a consistent header that can be used across all pages, improving maintainability."
+                  },
+                  {
+                    "timestamp": "2025-07-31T12:46:51Z",
+                    "task": "TASK-001D",
+                    "change": "Added the hero section to the homepage, including the main headline, introductory text, and a placeholder image.",
+                    "impact": "The homepage now has its primary content structure, fulfilling a key requirement of the user story."
+                  },
+                  {
+                    "timestamp": "2025-07-31T12:48:27Z",
+                    "task": "TASK-001E",
+                    "change": "Applied basic styling to the homepage and header, including a clean layout, professional font, and simple color scheme.",
+                    "impact": "The website now has a more polished and professional appearance, improving the user experience."
+                  },
+                  {
+                    "timestamp": "2025-07-31T12:58:17Z",
+                    "task": "TASK-001F",
+                    "change": "Initialized a Git repository and made the initial commit of the project.",
+                    "impact": "The project is now under version control, which is a prerequisite for deploying to Vercel and collaborating with other developers."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "FEAT-01B",
+          "title": "Project Portfolio",
+          "description": "A showcase of completed projects that allows prospective clients to see the quality and range of the architect's work.",
+          "status": "done",
+          "workItems": [
+            {
+              "id": "SITE-002",
+              "type": "story",
+              "title": "Visitor browses project examples",
+              "description": "As a prospective client, I want to browse a gallery of project examples, so that I can evaluate the architect's work and style.",
+              "acceptanceCriteria": [
+                "Given I am on the portfolio page,",
+                "When the page loads,",
+                "Then I should see a curated selection of project thumbnails with their titles and a brief description."
+              ],
+              "status": "done",
+              "engineeringPlan": {
+                "tasks": [
+                  { "id": "TASK-002A", "description": "Create Portfolio Page", "status": "done" },
+                  { "id": "TASK-002B", "description": "Define Project Data Structure", "status": "done" },
+                  { "id": "TASK-002C", "description": "Create Mock Project Data", "status": "done" },
+                  { "id": "TASK-002D", "description": "Create Project Thumbnail Component", "status": "done" },
+                  { "id": "TASK-002E", "description": "Build Project Gallery Component", "status": "done" },
+                  { "id": "TASK-002F", "description": "Implement Empty State", "status": "done" },
+                  { "id": "TASK-002G", "description": "Add Navigation Link", "status": "done" }
+                ],
+                "notes": [
+                  "Styling: All new components should use CSS Modules and follow the existing design language established by the homepage for consistency.",
+                  "Data Source: The project data is static for now. A future story will likely involve fetching this data from a headless CMS or a backend API.",
+                  "Image Optimization: Use the `next/image` component for all project images to ensure they are optimized for performance."
+                ],
+                "changelog": [
+                  {
+                    "timestamp": "2025-07-31T13:13:51Z",
+                    "task": "TASK-002A",
+                    "change": "Created the basic portfolio page at `achitect-website/src/pages/portfolio.tsx` and added a heading. Implemented a passing test to verify the page's creation.",
+                    "impact": "The portfolio page now exists and is ready for the project gallery to be added. It is covered by a basic test."
+                  },
+                  {
+                    "timestamp": "2025-07-31T13:15:49Z",
+                    "task": "TASK-002B",
+                    "change": "Defined the `Project` TypeScript interface in `achitect-website/src/types/project.ts`.",
+                    "impact": "This provides a consistent data structure for project information throughout the application, improving type safety and code clarity."
+                  },
+                  {
+                    "timestamp": "2025-07-31T13:16:13Z",
+                    "task": "TASK-002C",
+                    "change": "Created a mock project data file at `achitect-website/src/data/projects.ts`.",
+                    "impact": "This provides a static data source for developing and testing the project portfolio components without needing a live backend."
+                  },
+                  {
+                    "timestamp": "2025-07-31T13:17:20Z",
+                    "task": "TASK-002D",
+                    "change": "Created the `ProjectThumbnail` component and its corresponding test and stylesheet.",
+                    "impact": "This reusable component can now display individual project details, forming a key building block for the portfolio gallery."
+                  },
+                  {
+                    "timestamp": "2025-07-31T13:18:22Z",
+                    "task": "TASK-002E",
+                    "change": "Created the `ProjectGallery` component to display a list of project thumbnails.",
+                    "impact": "This component allows for the easy rendering of the entire project portfolio, making the portfolio page dynamic and maintainable."
+                  },
+                  {
+                    "timestamp": "2025-07-31T13:19:25Z",
+                    "task": "TASK-002F",
+                    "change": "Implemented the empty state for the `ProjectGallery` component.",
+                    "impact": "The portfolio page now displays a user-friendly message when no projects are available, improving the user experience."
+                  },
+                  {
+                    "timestamp": "2025-07-31T13:19:52Z",
+                    "task": "TASK-002G",
+                    "change": "Verified that the navigation link to the portfolio page already exists in the `Header` component.",
+                    "impact": "The portfolio page is now accessible from the main navigation, improving site usability."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "FEAT-01C",
+          "title": "About Me",
+          "description": "A section for prospective clients to learn about the architect's background and philosophy.",
+          "status": "done",
+          "workItems": [
+            {
+              "id": "SITE-004",
+              "type": "story",
+              "title": "Visitor learns about the architect",
+              "description": "As a prospective client, I want to read about the architect's background and approach, so that I can determine if they are a good fit for my project.",
+              "acceptanceCriteria": [
+                "Given I am on the 'About Me' page,",
+                "When the page loads,",
+                "Then I can see a professional photo of the architect, a biography, and their design philosophy."
+              ],
+              "status": "done",
+              "engineeringPlan": {
+                "tasks": [
+                  { "id": "TASK-004A", "description": "Create 'About' Page", "status": "done" },
+                  { "id": "TASK-004B", "description": "Implement Core SEO Metadata", "status": "done" },
+                  { "id": "TASK-004C", "description": "Add Open Graph Tags", "status": "done" },
+                  { "id": "TASK-004D", "description": "Implement JSON-LD Structured Data", "status": "done" },
+                  { "id": "TASK-004E", "description": "Define 'About Me' Data Structure", "status": "done" },
+                  { "id": "TASK-004F", "description": "Create Mock 'About Me' Data", "status": "done" },
+                  { "id": "TASK-004G", "description": "Develop 'About Me' Components", "status": "done" },
+                  { "id": "TASK-004H", "description": "Implement Image Placeholder", "status": "done" },
+                  { "id": "TASK-004I", "description": "Integrate Components and Data", "status": "done" },
+                  { "id": "TASK-004J", "description": "Add Navigation Link", "status": "done" }
+                ],
+                "notes": [
+                  "A multi-faceted approach to SEO is key. This includes on-page metadata, structured data for rich results, and Open Graph tags for social sharing. Semantic HTML remains crucial.",
+                  "The next/image component with placeholders is the primary tool for performance optimization on this page.",
+                  "The data structure will now include imageAltText to ensure this important accessibility and SEO attribute is not overlooked."
+                ],
+                "changelog": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "FEAT-01D",
+          "title": "My Process & Services",
+          "description": "A clear and direct explanation of the architect's work process and the services they provide.",
+          "status": "done",
+          "workItems": [
+            {
+              "id": "SITE-005",
+              "type": "story",
+              "title": "Visitor understands the architect's process and services",
+              "description": "As a prospective client, I want to clearly understand the architect's process and what services they offer, so that I know how they can help me.",
+              "acceptanceCriteria": [
+                "Given I am on the 'Process & Services' page,",
+                "When the page loads,",
+                "Then I see a clear, easy-to-understand description of the work process (e.g., 'Initial Consultation', 'Design Development').",
+                "And I see a list of services offered, such as 'Residential Design', 'Feasibility Studies', etc."
+              ],
+              "status": "done",
+              "engineeringPlan": {
+                "tasks": [
+                  { "id": "TASK-005A", "description": "Create 'Process & Services' Page", "status": "done" },
+                  { "id": "TASK-005B", "description": "Define Data Structures", "status": "done" },
+                  { "id": "TASK-005C", "description": "Create Mock Data", "status": "done" },
+                  { "id": "TASK-005D", "description": "Develop 'Process' Components", "status": "done" },
+                  { "id": "TASK-005E", "description": "Develop 'Services' Components", "status": "done" },
+                  { "id": "TASK-005F", "description": "Integrate Components and Data", "status": "done" },
+                  { "id": "TASK-005G", "description": "Add Navigation Link", "status": "done" }
+                ],
+                "notes": [
+                  "Styling: All new components must use CSS Modules and adhere to the established visual style of the website for consistency.",
+                  "Data Source: The process and service data will be static for this story. Future work could involve fetching this from a headless CMS.",
+                  "Clarity: The primary goal is to present the information in a clear, easy-to-understand format for prospective clients."
+                ],
+                "changelog": [
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-005A",
+                    "changeSummary": "Created the basic 'Process & Services' page at `achitect-website/src/pages/process.tsx` and added a heading. Implemented a passing test to verify the page's creation.",
+                    "filesChanged": [
+                      "achitect-website/src/pages/process.tsx",
+                      "achitect-website/src/pages/process.test.tsx"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-005B",
+                    "changeSummary": "Defined the `ProcessStep` and `Service` TypeScript interfaces in `achitect-website/src/types/process.ts`.",
+                    "filesChanged": [
+                      "achitect-website/src/types/process.ts"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-005C",
+                    "changeSummary": "Created a mock data file at `achitect-website/src/data/process.ts` with sample data for process steps and services.",
+                    "filesChanged": [
+                      "achitect-website/src/data/process.ts"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-005D",
+                    "changeSummary": "Developed the `ProcessTimeline` and `ProcessStepCard` components to display the architect's work process.",
+                    "filesChanged": [
+                      "achitect-website/src/components/ProcessTimeline.tsx",
+                      "achitect-website/src/components/ProcessTimeline.test.tsx",
+                      "achitect-website/src/components/ProcessTimeline.module.css",
+                      "achitect-website/src/components/ProcessStepCard.tsx",
+                      "achitect-website/src/components/ProcessStepCard.test.tsx",
+                      "achitect-website/src/components/ProcessStepCard.module.css"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-005E",
+                    "changeSummary": "Developed the `ServiceList` and `ServiceListItem` components to display the architect's offered services.",
+                    "filesChanged": [
+                      "achitect-website/src/components/ServiceList.tsx",
+                      "achitect-website/src/components/ServiceList.test.tsx",
+                      "achitect-website/src/components/ServiceList.module.css",
+                      "achitect-website/src/components/ServiceListItem.tsx",
+                      "achitect-website/src/components/ServiceListItem.test.tsx",
+                      "achitect-website/src/components/ServiceListItem.module.css"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-005F",
+                    "changeSummary": "Integrated the `ProcessTimeline` and `ServiceList` components into the 'Process & Services' page, feeding them the mock data.",
+                    "filesChanged": [
+                      "achitect-website/src/pages/process.tsx",
+                      "achitect-website/src/pages/process.test.tsx"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-005G",
+                    "changeSummary": "Verified that the navigation link to the 'Process & Services' page already exists in the `Header` component and that the corresponding test is passing.",
+                    "filesChanged": [
+                      "achitect-website/src/components/Header.tsx",
+                      "achitect-website/src/components/Header.test.tsx"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "FIX-001",
+                    "changeSummary": "Renamed the `process.tsx` and `process.test.tsx` files to `process-and-services.tsx` and `process-and-services.test.tsx` respectively. This aligns the page's file path with the navigation link in the `Header` component, fixing a 404 error.",
+                    "filesChanged": [
+                      "achitect-website/src/pages/process-and-services.tsx",
+                      "achitect-website/src/pages/process-and-services.test.tsx"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "FEAT-01E",
+          "title": "Contact & Inquiry",
+          "description": "A simple way for prospective clients to get in touch with the architect to discuss a potential project.",
+          "status": "done",
+          "workItems": [
+            {
+              "id": "SITE-006",
+              "type": "story",
+              "title": "Visitor sends an inquiry",
+              "description": "As a prospective client, I want a simple contact form, so that I can easily send a message to the architect.",
+              "acceptanceCriteria": [
+                "Given I am on the contact page,",
+                "When I fill in my name, email, and message and submit the form,",
+                "Then I see a confirmation message and the architect receives an email with my inquiry."
+              ],
+              "status": "done",
+              "engineeringPlan": {
+                "tasks": [
+                  { "id": "TASK-006A", "description": "Install Dependencies", "status": "done" },
+                  { "id": "TASK-006B", "description": "Create 'Contact' Page", "status": "done" },
+                  { "id": "TASK-006C", "description": "Develop 'ContactForm' Component", "status": "done" },
+                  { "id": "TASK-006D", "description": "Create API Route for Form Submission", "status": "done" },
+                  { "id": "TASK-006E", "description": "Implement Email Sending Logic", "status": "done" },
+                  { "id": "TASK-006F", "description": "Connect Frontend Form to API", "status": "done" },
+                  { "id": "TASK-006G", "description": "Add Navigation Link", "status": "done" },
+                  { "id": "TASK-006H", "description": "Integrate 'ContactForm' into 'Contact' Page", "status": "done" }
+                ],
+                "notes": [
+                  "Security: SMTP credentials and the recipient email address must be stored in environment variables (`.env.local`) and not be exposed to the client-side.",
+                  "User Experience: The form should provide clear feedback to the user, including validation errors, loading states during submission, and a clear success or failure message.",
+                  "Error Handling: The API route should include robust error handling to manage issues with email sending and provide meaningful feedback to the frontend."
+                ],
+                "changelog": [
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-006A",
+                    "changeSummary": "Installed `react-hook-form` and `nodemailer` as dependencies, and `@types/nodemailer` as a dev dependency.",
+                    "filesChanged": [
+                      "achitect-website/package.json",
+                      "achitect-website/package-lock.json"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-006B",
+                    "changeSummary": "Created the basic 'Contact' page at `achitect-website/src/pages/contact.tsx` and added a heading. Implemented a passing test to verify the page's creation.",
+                    "filesChanged": [
+                      "achitect-website/src/pages/contact.tsx",
+                      "achitect-website/src/pages/contact.test.tsx"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-006C",
+                    "changeSummary": "Developed the `ContactForm` component with fields for name, email, and message, using `react-hook-form` for form handling.",
+                    "filesChanged": [
+                      "achitect-website/src/components/ContactForm.tsx",
+                      "achitect-website/src/components/ContactForm.test.tsx",
+                      "achitect-website/src/components/ContactForm.module.css"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-006D",
+                    "changeSummary": "Created the API route at `achitect-website/src/pages/api/contact.ts` to handle form submissions.",
+                    "filesChanged": [
+                      "achitect-website/src/pages/api/contact.ts",
+                      "achitect-website/src/pages/api/contact.test.ts"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-006E",
+                    "changeSummary": "Implemented the email sending functionality in the `/api/contact` route using `nodemailer`.",
+                    "filesChanged": [
+                      "achitect-website/src/pages/api/contact.ts",
+                      "achitect-website/src/pages/api/contact.test.ts"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-006F",
+                    "changeSummary": "Connected the `ContactForm` component to the `/api/contact` endpoint, enabling form submissions to be sent to the backend.",
+                    "filesChanged": [
+                      "achitect-website/src/components/ContactForm.tsx",
+                      "achitect-website/src/components/ContactForm.test.tsx"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-006G",
+                    "changeSummary": "Verified that the navigation link to the 'Contact' page already exists in the `Header` component and that the corresponding test is passing.",
+                    "filesChanged": [
+                      "achitect-website/src/components/Header.tsx",
+                      "achitect-website/src/components/Header.test.tsx"
+                    ]
+                  },
+                  {
+                    "author": "TDD Engineer",
+                    "taskId": "TASK-006H",
+                    "changeSummary": "Integrated the `ContactForm` component into the `contact.tsx` page.",
+                    "filesChanged": [
+                      "achitect-website/src/pages/contact.tsx",
+                      "achitect-website/src/pages/contact.test.tsx"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
