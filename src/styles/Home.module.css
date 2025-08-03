@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align to the left */
-  padding: 6rem 4rem; /* More padding */
+  padding: 6rem 2rem; /* More padding */
   min-height: calc(100vh - 100px); /* Full-height section */
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
 .heroContent {
-  max-width: 750px; /* Constrain text width */
+  max-width: 100%; /* Constrain text width */
 }
 
 .main h1 {

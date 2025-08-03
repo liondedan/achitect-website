@@ -3,12 +3,12 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 4rem;
   align-items: center;
-  padding: 4rem 1rem;
+  padding: 4rem 0;
   background-color: var(--color-white);
 }
 
 .heroContent {
-  max-width: 600px;
+  max-width: 100%;
 }
 
 .heroTitle {
