@@ -1,0 +1,3 @@
+- **Task:** Add a title to the about page
+- **Change:** Added a `div` with the class `page-header` and an `h1` tag with the text "About Me" inside the `main` element, before the `AboutMeContent` component.
+- **Impact:** The about page now has a title, consistent with the other pages.

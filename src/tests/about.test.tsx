@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import AboutPage from './about';
+import AboutPage from '../pages/about';
 import Head from 'next/head';
 import React from 'react';
 
@@ -36,7 +36,7 @@ describe('AboutPage', () => {
 
     // Check meta description
     const metaDesc = findTag('meta', 'name', 'description');
-    expect((metaDesc.props as any).content).toContain('Learn more about the architect');
+    expect((metaDesc.props as any).content).toContain('Learn more about the architect, their background, and their design philosophy.');
 
     // Check Open Graph tags
     const ogTitle = findTag('meta', 'property', 'og:title');
@@ -53,5 +53,15 @@ describe('AboutPage', () => {
     const schema = JSON.parse(jsonLdScript.props.dangerouslySetInnerHTML.__html);
     expect(schema['@type']).toBe('Person');
     expect(schema.name).toBe('The Architect');
+  });
+
+  it('renders the page header', () => {
+    render(<AboutPage />);
+    const heading = screen.getByRole('heading', {
+      name: /about me/i,
+      level: 1,
+    });
+    expect(heading).toBeInTheDocument();
+    expect(heading.parentElement?.classList.contains('page-header')).toBe(true);
   });
 });
