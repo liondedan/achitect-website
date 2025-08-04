@@ -1,6 +1,8 @@
 export interface AboutMe {
-  imageUrl: string;
-  imageAltText: string;
+  images: {
+    url: string;
+    altText: string;
+  }[];
   biography: string;
   designPhilosophy: string;
 }

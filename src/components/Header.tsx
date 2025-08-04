@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link href="/">STUDIO</Link>
+        <Link href="/">WD</Link>
       </div>
       <button className={styles.menuButton} onClick={toggleMenu} aria-label="menu">
         Menu
@@ -23,6 +23,7 @@ const Header = () => {
           <li><Link href="/portfolio">Portfolio</Link></li>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/process-and-services">Process</Link></li>
+          <li><Link href="/services">Services</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>
       </nav>

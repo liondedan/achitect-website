@@ -1,8 +1,16 @@
 import { AboutMe } from '../types/about';
 
 export const aboutMeData: AboutMe = {
-  imageUrl: '/wales-local-builder-designer.jpg',
-  imageAltText: 'A professional headshot of the architectural designer.',
+  images: [
+    {
+      url: '/profile-image.jpg',
+      altText: 'A professional headshot of the architectural designer.',
+    },
+    {
+      url: '/wales-local-builder-designer.jpg',
+      altText: 'A picture of a local welsh builder designer',
+    },
+  ],
   biography:
     "I’ve worked in architecture for over 30 years. After studying in Cardiff and travelling across Europe to explore design and buildings, I began my career in Cambridge before returning to Pembrokeshire to set up my own practice — which I’ve run ever since.",
   designPhilosophy:

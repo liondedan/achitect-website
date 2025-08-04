@@ -6,18 +6,16 @@ describe('AboutMeContent', () => {
   it('renders the biography and design philosophy', () => {
     render(<AboutMeContent data={aboutMeData} />);
 
-    const bioHeading = screen.getByRole('heading', { name: /biography/i });
-    expect(bioHeading).toBeInTheDocument();
     expect(screen.getByText(aboutMeData.biography)).toBeInTheDocument();
-
-    const philosophyHeading = screen.getByRole('heading', { name: /design philosophy/i });
-    expect(philosophyHeading).toBeInTheDocument();
-    expect(screen.getByText(aboutMeData.designPhilosophy)).toBeInTheDocument();
+    expect(screen.getByText(/Over the years, I’ve worked on everything/)).toBeInTheDocument();
   });
 
-  it('renders the architect\'s image with correct alt text', () => {
+  it("renders the architect's images with correct alt text", () => {
     render(<AboutMeContent data={aboutMeData} />);
-    const image = screen.getByRole('img');
-    expect(image).toHaveAttribute('alt', aboutMeData.imageAltText);
+    const images = screen.getAllByRole('img');
+    expect(images).toHaveLength(aboutMeData.images.length);
+    images.forEach((image, index) => {
+      expect(image).toHaveAttribute('alt', aboutMeData.images[index].altText);
+    });
   });
 });

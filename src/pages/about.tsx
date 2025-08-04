@@ -10,7 +10,7 @@ const AboutPage: NextPage = () => {
     '@type': 'Person',
     name: 'The Architect', // Placeholder name
     jobTitle: 'Architectural Designer',
-    image: aboutMeData.imageUrl,
+    image: aboutMeData.images[0].url,
     url: 'https://www.yourwebsite.com/about', // Placeholder URL
   };
 
@@ -23,7 +23,7 @@ const AboutPage: NextPage = () => {
         {/* Open Graph Tags */}
         <meta property="og:title" content="About Me – Architectural Designer" />
         <meta property="og:description" content="Learn more about my background and design philosophy as an architectural designer." />
-        <meta property="og:image" content={aboutMeData.imageUrl} />
+        <meta property="og:image" content={aboutMeData.images[0].url} />
         <meta property="og:url" content="https://www.yourwebsite.com/about" />
         <meta property="og:type" content="website" />
 

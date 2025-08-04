@@ -10,15 +10,18 @@ const AboutMeContent: React.FC<AboutMeContentProps> = ({ data }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image
-          src={data.imageUrl}
-          alt={data.imageAltText}
-          width={300}
-          height={300}
-          className={styles.image}
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8//VrPQAJDgNaKV144gAAAABJRU5ErkJggg=="
-        />
+        {data.images.map((image, index) => (
+          <Image
+            key={index}
+            src={image.url}
+            alt={image.altText}
+            width={300}
+            height={300}
+            className={styles.image}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8//VrPQAJDgNaKV144gAAAABJRU5ErkJggg=="
+          />
+        ))}
       </div>
       <div className={styles.textContainer}>
         <section>
