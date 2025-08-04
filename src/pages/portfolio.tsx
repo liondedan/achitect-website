@@ -39,7 +39,6 @@ const PortfolioPage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
 
       <main className="main-content">
         <div className="page-header">

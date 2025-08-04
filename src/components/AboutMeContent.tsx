@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { AboutMe } from '../types/about';
+import { AboutMe, ContentBlock } from '../types/about';
 import styles from './AboutMeContent.module.css';
 
 interface AboutMeContentProps {
@@ -7,29 +7,54 @@ interface AboutMeContentProps {
 }
 
 const AboutMeContent: React.FC<AboutMeContentProps> = ({ data }) => {
+  // Create pairs of [text, image] or [image, text]
+  const pairedSections = [];
+  let i = 0;
+  while (i < data.contentBlocks.length) {
+    const block1 = data.contentBlocks[i];
+    const block2 = data.contentBlocks[i + 1];
+
+    if (block1 && block2) {
+      pairedSections.push([block1, block2]);
+      i += 2;
+    } else if (block1) {
+      pairedSections.push([block1]);
+      i += 1;
+    }
+  }
+
   return (
     <div className={styles.container}>
-      <div className={styles.imageContainer}>
-        {data.images.map((image, index) => (
-          <Image
-            key={index}
-            src={image.url}
-            alt={image.altText}
-            width={300}
-            height={300}
-            className={styles.image}
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8//VrPQAJDgNaKV144gAAAABJRU5ErkJggg=="
-          />
-        ))}
-      </div>
-      <div className={styles.textContainer}>
-        <section>
-          <h2>A Life in Architecture — Rooted in Wales</h2>
-          <p>{data.biography}</p>
-          <p>{data.designPhilosophy}</p>
-        </section>
-      </div>
+      {pairedSections.map((pair, index) => (
+        <div
+          key={index}
+          className={`${styles.section} ${index % 2 === 1 ? styles.reversed : ''}`}
+        >
+          {pair.map((block, blockIndex) => {
+            if (block.type === 'text') {
+              return (
+                <div key={blockIndex} className={styles.textWrapper}>
+                  <p>{block.content}</p>
+                </div>
+              );
+            }
+            if (block.type === 'image') {
+              return (
+                <div key={blockIndex} className={styles.imageWrapper}>
+                  <Image
+                    src={block.url}
+                    alt={block.altText}
+                    width={400}
+                    height={400}
+                    className={styles.image}
+                  />
+                </div>
+              );
+            }
+            return null;
+          })}
+        </div>
+      ))}
     </div>
   );
 };

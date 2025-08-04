@@ -1,0 +1,61 @@
+## Changelog: SITE-008 - Engaging About Page Layout
+
+### Task 2: Update CSS for Grid Layout
+
+- **Author:** TDD Engineer
+- **Date:** 2025-08-04
+- **Change Summary:** Applied a CSS Grid layout to the `AboutMeContent` component to enable a multi-column design. This involved importing the CSS module and applying the `container` class to the root element.
+- **Files Changed:**
+    - `achitect-website/src/components/AboutMeContent.tsx`
+    - `achitect-website/src/components/AboutMeContent.module.css`
+    - `achitect-website/src/components/AboutMeContent.test.tsx`
+    - `achitect-website/jest.config.js`
+    - `achitect-website/__mocks__/styleMock.js`
+- **Task:** [Task 3: Adjust Data Structure and Content](SITE-008.plan.md#task-3-adjust-data-structure-and-content)
+- **Author:** TDD Engineer
+- **Date:** 2025-08-04
+- **Changes:** 
+  - Updated `achitect-website/src/data/about.ts` to use the `contentBlocks` data structure, splitting the biography and design philosophy into smaller, interleaved chunks of text and images. This aligns the data with the new component structure and type definitions.
+- **Files Changed:**
+  - `achitect-website/src/data/about.ts`
+- **Task:** Fix `TypeError` on About Page
+- **Author:** TDD Engineer
+- **Date:** 2025-08-04
+- **Changes:** 
+  - Fixed a crash on the About page caused by the recent data structure change. The page was still trying to access `aboutMeData.images`, which no longer exists.
+  - Updated `achitect-website/src/pages/about.tsx` to find the first image within the `contentBlocks` array and use its URL for the page's metadata.
+- **Files Changed:**
+  - `achitect-website/src/pages/about.tsx`
+- **Task:** Improve About Page Layout
+- **Author:** TDD Engineer
+- **Date:** 2025-08-04
+- **Changes:** 
+  - Refactored the CSS for the `AboutMeContent` component to use a single-column layout. This provides a more linear and intuitive reading experience, addressing feedback about the previous two-column grid being confusing.
+- **Files Changed:**
+  - `achitect-website/src/components/AboutMeContent.module.css`
+- **Task:** Replicate Portfolio Page Layout for About Page
+- **Author:** TDD Engineer
+- **Date:** 2025-08-04
+- **Changes:** 
+  - Updated the `AboutMeContent` component to use a two-column grid layout, similar to the `ProjectGallery` component on the Portfolio page. This provides a more visually appealing and structured layout for the About page content.
+  - Cleared the Next.js cache to resolve webpack errors.
+- **Files Changed:**
+  - `achitect-website/src/components/AboutMeContent.module.css`
+- **Task:** Implement Alternating Layout for About Page
+- **Author:** Design Engineer
+- **Date:** 2025-08-04
+- **Changes:** 
+  - Refactored the `AboutMeContent` component and its stylesheet to create a more dynamic, alternating layout.
+  - The new design uses Flexbox to create a "zig-zag" effect, with images alternating between the left and right sides of the text content. This provides a more balanced and visually engaging reading experience.
+- **Files Changed:**
+  - `achitect-website/src/components/AboutMeContent.tsx`
+  - `achitect-website/src/components/AboutMeContent.module.css`
+- **Task:** Finalize About Page Layout
+- **Author:** Design Engineer
+- **Date:** 2025-08-04
+- **Changes:** 
+  - Refactored the `AboutMeContent` component to correctly pair text blocks with images, creating a more structured and visually balanced "zig-zag" layout.
+  - Updated the CSS to use Flexbox for the new paired layout, ensuring images are properly sized and aligned. This resolves the previous issue of oversized images and creates a more professional and polished design.
+- **Files Changed:**
+  - `achitect-website/src/components/AboutMeContent.tsx`
+  - `achitect-website/src/components/AboutMeContent.module.css`

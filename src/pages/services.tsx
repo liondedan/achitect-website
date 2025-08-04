@@ -12,7 +12,6 @@ const ServicesPage: NextPage = () => {
         <meta name="description" content="Explore the architectural design, project management, and building surveying services offered." />
       </Head>
 
-      <Header />
 
       <main className="main-content">
         <ServicesContent data={servicesData} />

@@ -12,7 +12,6 @@ const ContactPage: NextPage = () => {
         <meta name="description" content="Get in touch with me for inquiries and collaborations as an architectural designer." />
       </Head>
 
-      <Header />
 
       <main className="main-content">
         <div className="page-header">

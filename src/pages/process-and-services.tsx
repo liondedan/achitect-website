@@ -14,7 +14,6 @@ const ProcessPage: NextPage = () => {
         <meta name="description" content="A Practical, Supportive Approach as an architectural designer — From First Ideas to Final Details" />
       </Head>
 
-      <Header />
 
       <main className="main-content">
         <div className="page-header">

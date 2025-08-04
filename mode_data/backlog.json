@@ -1,7 +1,7 @@
 {
   "solutionTitle": "Architect's Professional Website",
   "creationTimestamp": "2025-07-31T12:21:00Z",
-  "lastUpdatedTimestamp": "2025-08-03T19:40:44.589Z",
+  "lastUpdatedTimestamp": "2025-08-04T15:13:58.963Z",
   "epics": [
     {
       "id": "EPIC-01",
@@ -197,6 +197,32 @@
                   "A multi-faceted approach to SEO is key. This includes on-page metadata, structured data for rich results, and Open Graph tags for social sharing. Semantic HTML remains crucial.",
                   "The next/image component with placeholders is the primary tool for performance optimization on this page.",
                   "The data structure will now include imageAltText to ensure this important accessibility and SEO attribute is not overlooked."
+                ],
+                "changelog": []
+              }
+            },
+            {
+              "id": "SITE-008",
+              "type": "story",
+              "title": "Improve About Page Layout",
+              "description": "As a website visitor, I want to see a more engaging layout on the 'About Me' page, with images and text integrated thoughtfully, so that the content is more visually appealing and easier to read.",
+              "acceptanceCriteria": [
+                "Given I am on the 'About Me' page,",
+                "When the page loads,",
+                "Then the layout should not be a simple vertical stack of text and images.",
+                "And images should be positioned alongside relevant text content."
+              ],
+              "status": "planned",
+              "engineeringPlan": {
+                "tasks": [
+                  { "id": "TASK-008A", "description": "Refactor `AboutMeContent` Component", "status": "todo" },
+                  { "id": "TASK-008B", "description": "Update CSS for Grid Layout", "status": "todo" },
+                  { "id": "TASK-008C", "description": "Adjust Data Structure and Content", "status": "todo" },
+                  { "id": "TASK-008D", "description": "Update Component Test", "status": "todo" }
+                ],
+                "notes": [
+                  "Responsiveness: The CSS Grid implementation must be thoroughly tested across various screen sizes to ensure the layout adapts correctly and remains readable on mobile devices.",
+                  "Data Structure Changes: Modifying the data structure is a significant change. We must ensure that the component correctly handles the new `contentBlocks` array and that the data in `about.ts` is structured logically."
                 ],
                 "changelog": []
               }
@@ -431,6 +457,64 @@
               }
             }
           ]
+        },
+        {
+          "id": "FEAT-01F",
+          "title": "Site Footer",
+          "description": "Provides a consistent footer across all pages with contact encouragement, an inspirational message, and copyright information.",
+          "status": "todo",
+          "workItems": [
+            {
+              "id": "SITE-009",
+              "type": "story",
+              "title": "Visitor sees the site footer",
+              "description": "As a potential client, I want to see a subtle footer on each page, so that I can easily find contact information and see the site is professionally finished.",
+              "acceptanceCriteria": [
+                "Given I am on any page of the website,",
+                "When I scroll to the bottom,",
+                "Then I should see a footer section.",
+                "And the footer contains underlined text encouraging users to get in touch.",
+                "And the footer contains an inspirational line of text.",
+                "And the footer contains the copyright date information."
+              ],
+              "status": "done",
+              "engineeringPlan": {
+                "tasks": [
+                  {
+                    "id": "TASK-009A",
+                    "description": "Create Footer Component File",
+                    "status": "done"
+                  },
+                  {
+                    "id": "TASK-009B",
+                    "description": "Implement Footer Structure and Content",
+                    "status": "done"
+                  },
+                  {
+                    "id": "TASK-009C",
+                    "description": "Style the Footer",
+                    "status": "done"
+                  },
+                  {
+                    "id": "TASK-009D",
+                    "description": "Write Component Test",
+                    "status": "done"
+                  },
+                  {
+                    "id": "TASK-009E",
+                    "description": "Integrate Footer into Application",
+                    "status": "done"
+                  }
+                ],
+                "notes": [
+                  "The 'Get in touch' link should navigate to the existing contact page.",
+                  "The copyright year should be generated dynamically using `new Date().getFullYear()` to ensure it's always current.",
+                  "The footer's styling must be carefully managed to ensure it does not overlap with or obscure content on any page, particularly on pages with less content."
+                ],
+                "changelog": []
+              }
+            }
+          ]
         }
       ]
     },
@@ -498,28 +582,10 @@
                   {
                     "timestamp": "2025-08-03T19:40:19.751Z",
                     "task": "TASK-007C",
-                    "change": "Made the Hero, ProjectGallery, AboutMeContent, and ProcessTimeline components responsive.",
-                    "impact": "The core components of the website now adapt to mobile viewports, improving the user experience on smaller devices."
+                    "change": "The `ServicesContent` component has been updated to use a two-column grid layout on larger screens, improving readability and visual appeal. On mobile devices, it gracefully collapses to a single-column layout.",
+                    "impact": "The services page is now more engaging and easier to navigate on both desktop and mobile devices."
                   }
                 ]
-              }
-            },
-            {
-              "id": "SITE-008",
-              "type": "story",
-              "title": "User views the website on a tablet device",
-              "description": "As a prospective client using a tablet, I want the website to display correctly, so that I can have a comfortable browsing experience.",
-              "acceptanceCriteria": [
-                "Given I am viewing the website on a screen between 768px and 1024px,",
-                "When the page loads,",
-                "Then the layout should adapt to the tablet screen size, potentially using a two-column layout where appropriate.",
-                "And all interactive elements should be easily tappable."
-              ],
-              "status": "new",
-              "engineeringPlan": {
-                "tasks": [],
-                "notes": [],
-                "changelog": []
               }
             }
           ]
